@@ -1,0 +1,18 @@
+service: 
+  name: Json API
+  connection: 
+    host: jsonplaceholder.typicode.com
+    https: true
+  endpoints: 
+    - name: todos
+      method: GET
+      path: /todos/1
+      response: |
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "delectus aut autem",
+          "completed": false
+        }
+    - name: posts
+      path: /api/posts/1?include=author
